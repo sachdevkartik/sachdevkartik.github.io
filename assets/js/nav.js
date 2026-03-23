@@ -1,12 +1,18 @@
 /* ── Theme toggle ─────────────────────────────────────── */
 const themeToggle = document.querySelector('.theme-toggle');
-const saved = localStorage.getItem('theme');
-if (saved) document.documentElement.setAttribute('data-theme', saved);
+const themeIcon   = themeToggle.querySelector('.theme-icon');
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  themeIcon.textContent = theme === 'light' ? '☀' : '☽';
+}
+
+const saved = localStorage.getItem('theme') || 'dark';
+applyTheme(saved);
 
 themeToggle.addEventListener('click', () => {
-  const current = document.documentElement.getAttribute('data-theme');
-  const next = current === 'light' ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', next);
+  const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  applyTheme(next);
   localStorage.setItem('theme', next);
 });
 

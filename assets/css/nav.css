@@ -46,10 +46,7 @@
   flex-shrink: 0;
 }
 .theme-toggle:hover { color: var(--text); border-color: var(--text3); }
-.theme-toggle .icon-sun  { display: none; }
-.theme-toggle .icon-moon { display: block; }
-[data-theme="light"] .theme-toggle .icon-sun  { display: block; }
-[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+.theme-icon { font-size: 15px; line-height: 1; }
 
 .nav-toggle {
   display: none;
