@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sachdevkartik.github.io/sitemap.xml
