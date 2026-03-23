@@ -20,6 +20,21 @@
   --glow:      0 0 40px rgba(118,185,0,0.08);
 }
 
+/* ─── LIGHT MODE ────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg:        #f5f7fa;
+  --bg2:       #edf0f4;
+  --bg3:       #e2e7ee;
+  --border:    #ccd3dd;
+  --accent:    #5a8f00;
+  --accent2:   #4a7a00;
+  --text:      #111827;
+  --text2:     #4b5563;
+  --text3:     #9ca3af;
+  --shadow:    0 4px 24px rgba(0,0,0,0.1);
+  --glow:      0 0 40px rgba(90,143,0,0.12);
+}
+
 html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
