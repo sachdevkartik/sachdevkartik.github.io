@@ -1,36 +1,3 @@
-/* ── Navbar scroll effect ─────────────────────────────── */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
-}, { passive: true });
-
-/* ── Mobile nav toggle ────────────────────────────────── */
-const toggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-navLinks.querySelectorAll('a').forEach(a =>
-  a.addEventListener('click', () => navLinks.classList.remove('open'))
-);
-
-/* ── Scroll reveal ────────────────────────────────────── */
-const revealEls = document.querySelectorAll(
-  'section > .container > *, .paper-card, .talk-card, .post-card, .project-card, .stat-card'
-);
-revealEls.forEach(el => el.classList.add('reveal'));
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-revealEls.forEach(el => observer.observe(el));
-
 /* ── Particle canvas ──────────────────────────────────── */
 (function () {
   const canvas = document.getElementById('particles');
@@ -100,19 +67,3 @@ revealEls.forEach(el => observer.observe(el));
   }
   loop();
 })();
-
-/* ── Active nav link highlighting ────────────────────── */
-const sections = document.querySelectorAll('section[id]');
-const navItems = document.querySelectorAll('.nav-links a');
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      navItems.forEach(a => a.style.color = '');
-      const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
-      if (active) active.style.color = 'var(--text)';
-    }
-  });
-}, { threshold: 0.4 });
-
-sections.forEach(s => sectionObserver.observe(s));
