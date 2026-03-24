@@ -10,7 +10,7 @@
   --accent2:   #5a8f00;
   --text:      #e2e8f0;
   --text2:     #8b98a9;
-  --text3:     #5a6a7a;
+  --text3:     #7a8fa3;
   --font:      'Inter', system-ui, sans-serif;
   --mono:      'JetBrains Mono', monospace;
   --radius:    12px;
@@ -30,7 +30,7 @@
   --accent2:   #3a6000;
   --text:      #111827;
   --text2:     #4b5563;
-  --text3:     #6b7280;
+  --text3:     #575f6b;
   --shadow:    0 4px 24px rgba(0,0,0,0.1);
   --glow:      0 0 40px rgba(90,143,0,0.12);
 }
@@ -68,7 +68,7 @@ section:nth-child(even) { background: var(--bg2); }
 }
 .section-title::after {
   content: '';
-  display: block; width: 36px; height: 3px;
+  display: block; width: 48px; height: 3px;
   background: var(--accent); margin-top: 0.5rem;
   border-radius: 2px;
 }

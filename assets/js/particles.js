@@ -65,5 +65,7 @@
     connect();
     requestAnimationFrame(loop);
   }
-  loop();
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    loop();
+  }
 })();

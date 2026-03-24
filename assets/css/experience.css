@@ -65,7 +65,7 @@
   font-size: 0.88rem; color: var(--text2); font-weight: 500;
 }
 .exp-date {
-  font-family: var(--mono); font-size: 0.78rem;
+  font-family: var(--mono); font-size: 0.8rem;
   color: var(--text3); white-space: nowrap;
   padding-top: 0.2rem;
 }
@@ -99,6 +99,7 @@
 .edu-icon {
   font-size: 2.2rem; line-height: 1; flex-shrink: 0; margin-top: 0.1rem;
 }
+.edu-content { min-height: 80px; }
 .edu-content h3 {
   font-size: 1.15rem; font-weight: 600; margin-bottom: 0.3rem;
 }
