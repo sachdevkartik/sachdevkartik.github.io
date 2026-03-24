@@ -39,9 +39,9 @@ const navItems = document.querySelectorAll('.nav-links a');
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
-      navItems.forEach(a => a.style.color = '');
+      navItems.forEach(a => a.classList.remove('active'));
       const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
-      if (active) active.style.color = 'var(--text)';
+      if (active) active.classList.add('active');
     }
   });
 }, { threshold: 0.4 });

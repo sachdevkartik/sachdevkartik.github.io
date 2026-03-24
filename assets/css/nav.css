@@ -35,6 +35,7 @@
   transition: color var(--transition);
 }
 .nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--text); }
 /* ─── THEME TOGGLE ──────────────────────────────────────── */
 .theme-toggle {
   background: var(--bg3); border: 1px solid var(--border);
